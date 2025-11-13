@@ -1,0 +1,55 @@
+import { useState } from "react"
+
+
+export const Dropdown = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const [selected, setSelected] = useState<string>()
+
+    const options = ["A-Z", "Z-A"];
+    const handleClick=(option:string)=>{
+        setSelected(option);
+        setIsOpen(false);
+    }
+
+
+    return (
+        <div className="flex justify-between items-center h-screen bg-gry-100">
+            <div className="relative inline-block text-left w-30">
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="w-full border justify-between px-3 py-2 items-center"
+                >
+                    {selected || "sort By"}
+                    <svg
+                        className={`w-4 h-4 transform transition-transform ${(isOpen ? 'rotate-180' : 'rotate-0')}`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                </button>
+                {isOpen &&
+                    <ul className="absolute mt-1 w-full border bg-white z-10">
+                        {options.map((option) => (
+                            <li
+                                key="option"
+                                className="cursor-pointer px-3 py-2"
+                                onClick={()=>handleClick(option)}
+                            >
+                                {option}
+                            </li>
+                        ))}
+                    </ul>
+                }
+            </div>
+        </div>
+    )
+}
