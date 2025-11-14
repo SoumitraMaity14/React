@@ -1,11 +1,12 @@
-import { Dropdown } from "./components/Dropdown"
+
+import { Sort } from "./components/Sort"
 
 
 function App() {
 
   return (
     <>
-   <Dropdown />
+   <Sort/>
 
     </>
   )

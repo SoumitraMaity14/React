@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export const Dropdown = () => {
+export const Dropdown = ({setSortBy}:{setSortBy:(value:string)=>void}) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const [selected, setSelected] = useState<string>()
@@ -9,18 +9,19 @@ export const Dropdown = () => {
     const options = ["A-Z", "Z-A"];
     const handleClick=(option:string)=>{
         setSelected(option);
+        setSortBy(option);
         setIsOpen(false);
     }
 
 
     return (
-        <div className="flex justify-between items-center h-screen bg-gry-100">
+        <div className="flex justify-center items-center bg-gry-100 h-20">
             <div className="relative inline-block text-left w-30">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="w-full border justify-between px-3 py-2 items-center"
+                    className="w-full border flex justify-between px-3 py-2 items-center"
                 >
-                    {selected || "sort By"}
+                    {selected || "Sort By"}
                     <svg
                         className={`w-4 h-4 transform transition-transform ${(isOpen ? 'rotate-180' : 'rotate-0')}`}
                         xmlns="http://www.w3.org/2000/svg"
