@@ -6,14 +6,12 @@ export const Dropdown = ({setSortBy}:{setSortBy:(value:string)=>void}) => {
 
     const [selected, setSelected] = useState<string>()
 
-    const options = ["A-Z", "Z-A"];
+    const options = ["A-Z", "Z-A", "PRICE_LOW_HIGH", "PRICE_HIGH_LOW"];
     const handleClick=(option:string)=>{
         setSelected(option);
         setSortBy(option);
         setIsOpen(false);
     }
-
-
     return (
         <div className="flex justify-center items-center bg-gry-100 h-20">
             <div className="relative inline-block text-left w-30">
