@@ -14,7 +14,7 @@ export const Dropdown = ({setSortBy}:{setSortBy:(value:string)=>void}) => {
     }
     return (
         <div className="flex justify-center items-center bg-gry-100 h-20">
-            <div className="relative inline-block text-left w-30">
+            <div className="relative inline-block text-left w-48">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="w-full border flex justify-between px-3 py-2 items-center"
