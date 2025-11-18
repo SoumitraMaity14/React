@@ -1,6 +1,7 @@
 
 import { MegaMenu } from "./components/flyhover-menu/MegaMenu"
-import { Sort } from "./components/Sort"
+import { Sort } from "./components/sort/Sort"
+
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
    <Sort/>
    <MegaMenu/>
+   
 
     </>
   )
