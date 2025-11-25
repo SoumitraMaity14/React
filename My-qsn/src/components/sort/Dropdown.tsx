@@ -1,8 +1,23 @@
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 export const Dropdown = ({setSortby}:{setSortby:(value:string)=>void}) => {
     const [isopen, setIsOpen] = useState(false)
 
     const [selected, setSelected] = useState<string | null>(null)
+
+    const dropdownRef=useRef<HTMLDivElement | null>(null)
+
+
+    useEffect(()=>{
+        const handleClickOutside=(e:MouseEvent)=>{
+            if(dropdownRef.current && !dropdownRef.current.contains(e.target as Node)){
+                setIsOpen(false)
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside)
+        return()=> document.removeEventListener("mousedown", handleClickOutside)
+
+    }, [])
 
     const options = ["A-Z", "Z-A", "PRICE_LOW_HIGH", "PRICE_HIGH_LOW"];
 
@@ -15,7 +30,7 @@ export const Dropdown = ({setSortby}:{setSortby:(value:string)=>void}) => {
 
 
     return (
-        <div>
+        <div ref={dropdownRef}>
             <div className="flex justify-center items-center h-20">
                 <div className="relative inline-block text-left w-48">
                     <button
