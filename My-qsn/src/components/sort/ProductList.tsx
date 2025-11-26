@@ -1,5 +1,5 @@
 
-export const ProductList = ({ sortby }: { sortby: string }) => {
+export const ProductList = ({ sortby,search }: { sortby: string, search:string }) => {
 
     type productsType = {
         name: string,
@@ -28,9 +28,12 @@ export const ProductList = ({ sortby }: { sortby: string }) => {
         "PRICE_HIGH_LOW": (a, b) => (b.price - a.price),
     }
 
-    const sortedProducts = [...products].sort(sortfunction[sortby] || (() => 0))
+    
 
-
+    const filtered=products.filter((p)=>{
+       return p.name.toLowerCase().includes(search.toLowerCase())
+    })
+    const sortedProducts=[...filtered].sort(sortfunction[sortby] || (()=>0))
 
 
     return (

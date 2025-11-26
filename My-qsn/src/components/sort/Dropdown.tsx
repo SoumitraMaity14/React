@@ -10,7 +10,7 @@ export const Dropdown = ({setSortby}:{setSortby:(value:string)=>void}) => {
     useEffect(()=>{
         const handleClickOutside=(e:MouseEvent)=>{
             if(dropdownRef.current && !dropdownRef.current.contains(e.target as Node)){
-                setIsOpen(false)
+                setIsOpen(false) 
             }
         }
 
