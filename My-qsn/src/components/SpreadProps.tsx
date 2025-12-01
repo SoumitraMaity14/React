@@ -30,3 +30,42 @@ export const RestProps=({firstname,...rest})=>{
       </div>
     )
 }
+
+
+import {useState} from 'react'
+
+export const CuponApply=()=>{
+  const [isOpen, setIsOpen]=useState(false);
+  const [selectedCoupons, setSelectedCupons]=useState<string|null>(null) 
+  const cupons=["FREE10","FREE20","FREE30"]
+  return (
+    <div>
+      <div>
+        <h2>selected cupons</h2>
+        { selectedCupons && (
+      <div>
+        cuppons applied: {selectedCupons}
+      </div>
+        )}
+      <button onClick={()=>setIsOpen(true)}>Apply Coupon</button>
+        {isOpen && (
+
+      <div>
+        cupons.map((c)=>{
+          <div key={c}
+           onChange={()=> setSelectedCupons(c)}
+            >
+          {c}
+          </div>
+          <button onClick={()=>setIsOpen(false)}>
+           Select cupon</button>
+      
+        })
+      </div>
+        )}
+        
+      </div>
+    
+    </div>
+  )
+}
