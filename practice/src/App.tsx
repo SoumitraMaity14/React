@@ -5,12 +5,14 @@ import { RestProps } from './components/props/RestProps'
 import { SpreadProps } from './components/props/SpreadProps'
 import { RenderList } from './components/render/RenderList'
 import { RenderString } from './components/render/RenderString'
+import { Demo } from './components/state/Demo'
 
 function App() {
   
 
   return (
     <>
+    <Demo/>
     <RenderString/>
     <RenderList/>
     <SpreadProps name="Soumitra" lastname="Maity" age={22} email="maity@gmail.com" />
