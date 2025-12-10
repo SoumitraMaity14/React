@@ -1,12 +1,26 @@
 import { useState } from "react"
 export const Logged = () => {
     const [isLoggedIn, setIsLoggedIn]=useState(true)
-    const toggleLoginHandle=()=>{
+    const [message, setMessage]=useState("")
+    
+    
+    const handaleLogin=()=>{
         setIsLoggedIn(!isLoggedIn)
+    }
+
+    const handaleInputChange=(e:any)=>{
+        setMessage(e.target.value)
     }
   return (
     <div>
-        <button onClick={toggleLoginHandle}>{isLoggedIn? 'Login' :'Logout'}</button>
+        <button onClick={handaleLogin}>{isLoggedIn? 'Login' :'Logout'}</button>
+        <input 
+        type="text" 
+        placeholder="enter text here.." 
+        value={message}
+        onChange={handaleInputChange}
+        />
+        <p>{message}</p>
     </div>
   )
 }
