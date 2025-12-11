@@ -5,14 +5,18 @@ import { RestProps } from './components/props/RestProps'
 import { SpreadProps } from './components/props/SpreadProps'
 import { RenderList } from './components/render/RenderList'
 import { RenderString } from './components/render/RenderString'
+import { Dashboard } from './components/state/Dashboard'
 import { Demo } from './components/state/Demo'
 import { Logged } from './components/state/Logged'
+import { SnapShot } from './components/state/SnapShot'
 
 function App() {
   
 
   return (
     <>
+    <SnapShot/>
+    <Dashboard/>
     <Logged/>
     <Demo/>
     <RenderString/>
