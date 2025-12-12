@@ -8,6 +8,7 @@ import { RenderString } from './components/render/RenderString'
 import { Dashboard } from './components/state/Dashboard'
 import { Demo } from './components/state/Demo'
 import { Logged } from './components/state/Logged'
+import { PrevState } from './components/state/PrevState'
 import { SnapShot } from './components/state/SnapShot'
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
 
   return (
     <>
+    <PrevState/>
+    <br>
+    </br>
     <SnapShot/>
     <Dashboard/>
     <Logged/>
