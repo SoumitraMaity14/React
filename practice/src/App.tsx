@@ -9,6 +9,7 @@ import { BatchingState } from './components/state/BatchingState'
 import { Dashboard } from './components/state/Dashboard'
 import { Demo } from './components/state/Demo'
 import { Logged } from './components/state/Logged'
+import { ObjectState } from './components/state/object/ObjectState'
 import { PrevState } from './components/state/PrevState'
 import { SnapShot } from './components/state/SnapShot'
 
@@ -17,6 +18,8 @@ function App() {
 
   return (
     <>
+    <ObjectState/>
+    <br/> <br/> <br/> <br/> <br/> <br/>
     <BatchingState/>
     <PrevState/>
     <br>
