@@ -5,6 +5,7 @@ import { RestProps } from './components/props/RestProps'
 import { SpreadProps } from './components/props/SpreadProps'
 import { RenderList } from './components/render/RenderList'
 import { RenderString } from './components/render/RenderString'
+import { BatchingState } from './components/state/BatchingState'
 import { Dashboard } from './components/state/Dashboard'
 import { Demo } from './components/state/Demo'
 import { Logged } from './components/state/Logged'
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+    <BatchingState/>
     <PrevState/>
     <br>
     </br>
