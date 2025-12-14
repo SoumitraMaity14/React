@@ -5,6 +5,7 @@ import { RestProps } from './components/props/RestProps'
 import { SpreadProps } from './components/props/SpreadProps'
 import { RenderList } from './components/render/RenderList'
 import { RenderString } from './components/render/RenderString'
+import { TodoList } from './components/state/array/TodoList'
 import { BatchingState } from './components/state/BatchingState'
 import { Dashboard } from './components/state/Dashboard'
 import { Demo } from './components/state/Demo'
@@ -18,6 +19,8 @@ function App() {
 
   return (
     <>
+    <TodoList/>
+      <br/> <br/> <br/> <br/> <br/> <br/>
     <ObjectState/>
     <br/> <br/> <br/> <br/> <br/> <br/>
     <BatchingState/>
