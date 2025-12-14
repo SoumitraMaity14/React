@@ -28,10 +28,8 @@ export const TodoList=()=>{
         }
         return item
        }))
-
     }
    
-
     return (
         <>
         <ul>
