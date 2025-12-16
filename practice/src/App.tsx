@@ -12,6 +12,7 @@ import { Demo } from './components/state/Demo'
 import { Logged } from './components/state/Logged'
 import { ObjectState } from './components/state/object/ObjectState'
 import { PrevState } from './components/state/PrevState'
+import { SharingState } from './components/state/SharingState'
 import { SnapShot } from './components/state/SnapShot'
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
 
   return (
     <>
+    <SharingState/>
+     <br/> <br/> <br/> <br/> <br/> <br/>
     <TodoList/>
       <br/> <br/> <br/> <br/> <br/> <br/>
     <ObjectState/>

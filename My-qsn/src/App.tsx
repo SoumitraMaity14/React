@@ -1,4 +1,4 @@
-
+import './App.css'
 import { ApplyCupon } from "./components/cupon/ApplyCupon"
 import { MegaMenu } from "./components/flyhover-menu/MegaMenu"
 import { Search } from "./components/search/Search"
