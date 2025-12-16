@@ -3,6 +3,7 @@ import './App.css'
 import { DirectProps } from './components/props/DirectProps'
 import { RestProps } from './components/props/RestProps'
 import { SpreadProps } from './components/props/SpreadProps'
+import { FirstLetter } from './components/render/FirstLetter'
 import { RenderList } from './components/render/RenderList'
 import { RenderString } from './components/render/RenderString'
 import { TodoList } from './components/state/array/TodoList'
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+    <FirstLetter/>
     <SharingState/>
      <br/> <br/> <br/> <br/> <br/> <br/>
     <TodoList/>
