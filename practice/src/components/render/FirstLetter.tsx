@@ -7,7 +7,8 @@ export const FirstLetter = () => {
         { name: "Rajkumar" },
         {name:" Varun"},
         {name: "zenia"},
-        {name:"Kaju"}
+        {name:"Kaju"},
+        {name: "chottu"}
     ]
     return (
         <div className="flex relative gap-3">
