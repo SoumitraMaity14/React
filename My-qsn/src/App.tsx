@@ -7,13 +7,14 @@ import { Todo } from "./components/todo/Todo"
 import { DashBoard } from "./components/tab-bars/DashBoard"
 import { TodoList } from "./components/todo/TodoList"
 
-
+import { CheckoutSummary } from './components/cupon/CuponDiscount'
 
 function App() {
 
   return (
     <>
-    <Todo/>
+    <CheckoutSummary/>
+    {/* <Todo/> */}
     {/* <Search/> */}
     {/* <DashBoard/> */}
    {/* <Sort/>
@@ -23,5 +24,6 @@ function App() {
     </>
   )
 }
+
 
 export default App
