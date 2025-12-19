@@ -3,6 +3,7 @@ import './App.css'
 import { DirectProps } from './components/props/DirectProps'
 import { RestProps } from './components/props/RestProps'
 import { SpreadProps } from './components/props/SpreadProps'
+import { ShoppingCartWithReducer } from './components/reducer/ShoppingCartWithReducer'
 import { FirstLetter } from './components/render/FirstLetter'
 import { RenderList } from './components/render/RenderList'
 import { RenderString } from './components/render/RenderString'
@@ -13,7 +14,7 @@ import { Demo } from './components/state/Demo'
 import { Logged } from './components/state/Logged'
 import { ObjectState } from './components/state/object/ObjectState'
 import { PrevState } from './components/state/PrevState'
-import { SharingState } from './components/state/SharingState'
+import { SharingState, ShoppingCart } from './components/state/SharingState'
 import { SnapShot } from './components/state/SnapShot'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+    <ShoppingCartWithReducer/>
     <FirstLetter/>
     <SharingState/>
      <br/> <br/> <br/> <br/> <br/> <br/>
