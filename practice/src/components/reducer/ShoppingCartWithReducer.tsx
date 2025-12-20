@@ -1,4 +1,5 @@
-import React, { useReducer } from 'react'
+import
+{ useReducer } from 'react'
 interface ProductsType {
     id: number,
     name: string,
