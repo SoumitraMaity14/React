@@ -1,55 +1,56 @@
 import { useState } from "react"
 
-export const ObjectState=()=>{
-    const [user, setUser]=useState({
-        name: "soumitra",
-        age: 26,
-        email: "maity@gmail.com",
-        address:{
-            location:"High school road, panchgechia",
-            city: "Ghatal"
+export const ObjectState = () => {
+    const [user, setUser] = useState({
+        name: "Sandip",
+        email: "sandip@gmail.com",
+        age: 24,
+        Address: {
+            location: "Bedia para road",
+            city: "kolkata"
         }
+
     })
-    const handaleName=()=>{
+    const updateNewUser = () => {
+
         setUser({
             ...user,
-            name: "Suman"
+            name: "soumitra",
+            age: 24,
+            email: "soumitra@gmail.com"
         })
+
     }
-    const handaleAge=()=>{
+    const updateName=()=>{
         setUser({
             ...user,
-            age: 25
-        })
-    }
-    const handaleUpdateAll=()=>{
-        setUser({
-            ...user,
-            name: "Suman",
-            age: 30
-        })
-    }
-    const handaleCity=()=>{
-        setUser({
-            ...user,
-            address:{
-                ...user.address,
-                city: "kolkata"
-            }
+            name:"Sachin Boss"
+
         })
     }
 
-    return(
+    const updateAddress=()=>{
+        setUser({
+            ...user,
+            Address:{
+                ...user.Address,
+                city: "Ghatal"
+            }
+
+        })
+    }
+
+    return (
         <>
-        <h2>Name: {user.name} </h2>
-        <p>Age: {user.age}</p>
-        <p>Email: {user.email}</p>
-        <p>Location: {user.address.location}</p>
-        <p>City: {user.address.city} </p>
-        <button onClick={handaleName}>update name</button>
-        <button onClick={handaleAge}> update age</button>
-        <button onClick={handaleUpdateAll}>Update Age and name</button>
-        <button onClick={handaleCity}>Update City Kolkata</button>
+            <h2>User Details:</h2>
+            <p>Name: {user.name}</p>
+            <p>Email: {user.email}   </p>
+            <p>Age: {user.age}</p>
+            <p>Location:{user.Address.location} </p>
+            <p>City: {user.Address.city} </p>
+            <button onClick={updateNewUser}>update User Details</button>
+            <button onClick={updateName}>Update Name</button>
+            <button onClick={updateAddress}>Update city</button>
 
         </>
     )

@@ -1,49 +1,30 @@
-import { useState } from "react"
+import React, { useState } from 'react'
 interface TodoType{
-    id: number,
+    id:number,
     text: string,
-    done:boolean
+    price:number
 }
-export const TodoList=()=>{
-    const [items, setItems]=useState<TodoType[]>([
-        {id:1, text:"learning react", done:false},
-        {id:2, text: "Overthinking", done: false}
-    ])
-    const  addItems=()=>{
-         const newItems={
-        id: Date.now(),
-        text: "planning for trip",
-        done: false
-    }
-    setItems([...items, newItems])
 
-    }
-    const removeTodo=(id:number)=>{
-        setItems(items.filter((item)=>item.id!==id))
-    }
-    const toggleList=(id:number)=>{
-       setItems(items.map(item=>{
-        if(item.id===id){
-            return {...item, done: !item.done}
+export const TodoList = () => {
+    const [items, setItems]=useState<TodoType[]>([
+        {id:1, text:"React Course", price:4999},
+        {id:2, text: "HTML Course", price: 2499},
+        {id:3, text: "Python Course", price: 5499 }
+    ])
+    const handaleNewTodo=()=>{
+        const newTodo={
+            id:Date.now(),
+            text: "Learning PLM",
+            price: 6999
         }
-        return item
-       }))
+        setItems([ ...items, newTodo])
     }
-   
-    return (
-        <>
-        <ul>
-            {items.map((item)=>(
-                <li key={item.id}> 
-                <span className={`${item.done? "line-through":""}`}>{item.text}</span>
-                <button onClick={()=>toggleList(item.id)}>{item.done? "Undo" :"Todo"}</button>
-                <button onClick={()=>removeTodo(item.id)}>remove</button>
-                </li>
-                
-            ))}
-            <button onClick={addItems}>Add Items</button>
-        </ul>
-        
-        </>
-    )
+    const deleteTodo=(id: number)=>{
+       {items.map(item=> item.id !== id)}
+    }
+  return (
+    <>
+
+    </>
+  )
 }
