@@ -4,6 +4,7 @@ import { DirectProps } from './components/props/DirectProps'
 import { RestProps } from './components/props/RestProps'
 import { SpreadProps } from './components/props/SpreadProps'
 import { PracticeCounterReducer } from './components/reducer/PracticeCounterReducer'
+import { ReducerInit } from './components/reducer/ReducerInit'
 import { ShoppingCartWithReducer } from './components/reducer/ShoppingCartWithReducer'
 import { FirstLetter } from './components/render/FirstLetter'
 import { RenderList } from './components/render/RenderList'
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+    <ReducerInit/>
     <PracticeCounterReducer/>
     <ShoppingCartWithReducer/>
     <FirstLetter/>
