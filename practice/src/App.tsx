@@ -17,6 +17,7 @@ import { Logged } from './components/state/Logged'
 import { ObjectState } from './components/state/object/ObjectState'
 import { PrevState } from './components/state/PrevState'
 import { SharingState, ShoppingCart } from './components/state/SharingState'
+import { SharingStatePractice } from './components/state/SharingStatePractice'
 import { SnapShot } from './components/state/SnapShot'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <>
+    <SharingStatePractice/>
     <ReducerInit/>
     <PracticeCounterReducer/>
     <ShoppingCartWithReducer/>

@@ -9,7 +9,7 @@ export const CheckoutSummary = () => {
         ReactPrice: 4999,
         HtmlPrice: 2499
     }
-    const cupons={SAVE20:"SAVE20", SAVE30:"SAVE30", SAVE40:"SAVE40"}
+   
     const handaleReact = () => {
         setItems({
             ...items,
@@ -26,7 +26,7 @@ export const CheckoutSummary = () => {
         <div className="max-w-xl mx-auto flex justify-center items-center flex-col">
             <ProductSummary name="React Course" price={price.ReactPrice} items={items.ReactItems} addOn={handaleReact} />
             <ProductSummary name="Html Course" price={price.HtmlPrice} items={items.HtmlItems} addOn={handaleHtml} />
-            <CartSummary items={items} price={price} cupons={cupons} />
+            <CartSummary items={items} price={price} />
         </div>
     )
 }
@@ -51,20 +51,34 @@ interface cartSummaryProps {
         ReactPrice: number,
         HtmlPrice: number
     },
-    cupons:{
-        SAVE20: string,
-        SAVE30: string,
-        SAVE40: string
-    }
+    
 }
 
-export const CartSummary = ({ items, price, cupons }: cartSummaryProps) => {
+export const CartSummary = ({ items, price,  }: cartSummaryProps) => {
+    const [selectedCupons, setSelectedCupons]=useState("")
     const totalItems = items.HtmlItems + items.ReactItems
     const totalPrice = items.ReactItems * price.ReactPrice + items.HtmlItems * price.HtmlPrice
+     const cupons=["SAVE20", "SAVE30", "SAVE40"]
+     const priceDiscount=()=>{
+        setSelectedCupons({
+            ...selectedCupons,
+            selectedCupons:" SAVE20"= totalPrice*20/100
+        })
+     }
     return (
         <div>
             <p>Total items:{totalItems}</p>
-            <option value={cupons.SAVE20}>select cupons:{cupons.SAVE20}</option>
+            {selectedCupons && (
+                cupons.map((cupon)=>{
+                    return(
+                        <>
+                        <option key={cupon}>{cupon}</option>
+                        </>
+                    )
+                })
+
+            )}
+           
             <p>Total price: {totalPrice}</p>
 
         </div>
