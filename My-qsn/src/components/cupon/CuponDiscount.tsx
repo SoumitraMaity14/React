@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const CheckoutSummary = () => {
+export const CuponDiscount = () => {
     const [items, setItems] = useState({
         ReactItems: 0,
         HtmlItems: 0
@@ -9,7 +9,7 @@ export const CheckoutSummary = () => {
         ReactPrice: 4999,
         HtmlPrice: 2499
     }
-   
+
     const handaleReact = () => {
         setItems({
             ...items,
@@ -51,36 +51,38 @@ interface cartSummaryProps {
         ReactPrice: number,
         HtmlPrice: number
     },
-    
+
 }
 
-export const CartSummary = ({ items, price,  }: cartSummaryProps) => {
-    const [selectedCupons, setSelectedCupons]=useState("")
+export const CartSummary = ({ items, price, }: cartSummaryProps) => {
+    const [selectedCupons, setSelectedCupons] = useState("")
     const totalItems = items.HtmlItems + items.ReactItems
     const totalPrice = items.ReactItems * price.ReactPrice + items.HtmlItems * price.HtmlPrice
-     const cupons=["SAVE20", "SAVE30", "SAVE40"]
-     const priceDiscount=()=>{
-        setSelectedCupons({
-            ...selectedCupons,
-            selectedCupons:" SAVE20"= totalPrice*20/100
-        })
-     }
+    const cupons: Record<string, number> = { "SAVE20": 20, "SAVE30": 30, "SAVE40": 40 }
+
+    const discountPercentage = selectedCupons ? cupons[selectedCupons] : 0
+    const discountAmount = (totalPrice * discountPercentage) / 100
+    const finalPrice = totalPrice - discountAmount
     return (
         <div>
             <p>Total items:{totalItems}</p>
-            {selectedCupons && (
-                cupons.map((cupon)=>{
-                    return(
-                        <>
-                        <option key={cupon}>{cupon}</option>
-                        </>
-                    )
-                })
-
-            )}
-           
             <p>Total price: {totalPrice}</p>
+            <select
+                value={selectedCupons}
+                onChange={(e: any) => setSelectedCupons(e.target.value)}
+            >
+                <option value="">Select Cupons:</option>
+                <option value="SAVE20">SAVE20 (20% off)</option>
+                <option value="SAVE30">SAVE30 (30% off)</option>
+                <option value="SAVE40">SAVE40 (40% off)</option>
 
+            </select>
+            {selectedCupons && (
+                <>
+                    <p>Total DisCount: {discountPercentage}</p>
+                    <p>Final Price After Discount: {finalPrice}</p>
+                </>
+            )}
         </div>
     )
 }

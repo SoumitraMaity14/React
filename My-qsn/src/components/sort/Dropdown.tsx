@@ -1,11 +1,8 @@
 import { useState, useEffect, useRef } from "react"
 export const Dropdown = ({setSortby}:{setSortby:(value:string)=>void}) => {
     const [isopen, setIsOpen] = useState(false)
-
     const [selected, setSelected] = useState<string | null>(null)
-
     const dropdownRef=useRef<HTMLDivElement | null>(null)
-
 
     useEffect(()=>{
         const handleClickOutside=(e:MouseEvent)=>{
@@ -13,7 +10,6 @@ export const Dropdown = ({setSortby}:{setSortby:(value:string)=>void}) => {
                 setIsOpen(false) 
             }
         }
-
         document.addEventListener("mousedown", handleClickOutside)
         return()=> document.removeEventListener("mousedown", handleClickOutside)
 

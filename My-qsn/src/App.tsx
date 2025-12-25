@@ -6,14 +6,15 @@ import { Sort } from "./components/sort/Sort"
 import { Todo } from "./components/todo/Todo"
 import { DashBoard } from "./components/tab-bars/DashBoard"
 import { TodoList } from "./components/todo/TodoList"
+import { CuponDiscount } from './components/cupon/CuponDiscount'
 
-import { CheckoutSummary } from './components/cupon/CuponDiscount'
+
 
 function App() {
 
   return (
     <>
-    <CheckoutSummary/>
+   <CuponDiscount/>
     {/* <Todo/> */}
     {/* <Search/> */}
     {/* <DashBoard/> */}
