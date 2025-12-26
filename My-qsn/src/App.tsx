@@ -7,6 +7,7 @@ import { Todo } from "./components/todo/Todo"
 import { DashBoard } from "./components/tab-bars/DashBoard"
 import { TodoList } from "./components/todo/TodoList"
 import { CuponDiscount } from './components/cupon/CuponDiscount'
+import { SortPractice } from './components/sort/SortPractice'
 
 
 
@@ -14,7 +15,8 @@ function App() {
 
   return (
     <>
-   <CuponDiscount/>
+    <SortPractice/>
+   {/* <CuponDiscount/> */}
     {/* <Todo/> */}
     {/* <Search/> */}
     {/* <DashBoard/> */}
