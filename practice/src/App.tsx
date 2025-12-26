@@ -1,5 +1,7 @@
 
 import './App.css'
+import { Main } from './components/context/Main'
+import { User } from './components/context/User'
 import { DirectProps } from './components/props/DirectProps'
 import { RestProps } from './components/props/RestProps'
 import { SpreadProps } from './components/props/SpreadProps'
@@ -25,6 +27,7 @@ function App() {
 
   return (
     <>
+    <Main/>
     <SharingStatePractice/>
     <ReducerInit/>
     <PracticeCounterReducer/>
