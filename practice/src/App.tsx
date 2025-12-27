@@ -1,6 +1,7 @@
 
 import './App.css'
 import { Main } from './components/context/Main'
+import { Header } from './components/context/update-context/Header'
 import { User } from './components/context/User'
 import { Dropdown } from './components/Dropdown'
 import { DirectProps } from './components/props/DirectProps'
@@ -28,7 +29,8 @@ function App() {
 
   return (
     <>
-    <Dropdown/>
+    <Header/>
+    {/* <Dropdown/>
     <Main/>
     <SharingStatePractice/>
     <ReducerInit/>
@@ -53,7 +55,7 @@ function App() {
     <RenderList/>
     <SpreadProps name="Soumitra" lastname="Maity" age={22} email="maity@gmail.com" />
      <DirectProps firstname="Soumitra" lastname="Maity" age={22} email="maity@gmail.com" />
-     <RestProps firstname="Soumitra" lastname="Maity" age={22} email="maity@gmail.com"/>
+     <RestProps firstname="Soumitra" lastname="Maity" age={22} email="maity@gmail.com"/> */}
     </>
   )
 }
