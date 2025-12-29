@@ -9,6 +9,7 @@ import { TodoList } from "./components/todo/TodoList"
 import { CuponDiscount } from './components/cupon/CuponDiscount'
 import { SortPractice } from './components/sort/SortPractice'
 import { SearchPractice } from './components/search/SearchPractice'
+import { TodoListPractice } from './components/todo/TodoListPractice'
 
 
 
@@ -16,7 +17,8 @@ function App() {
 
   return (
     <>
-    <SearchPractice/>
+    <TodoListPractice/>
+    {/* <SearchPractice/> */}
     {/* <SortPractice/> */}
    {/* <CuponDiscount/> */}
     {/* <Todo/> */}
