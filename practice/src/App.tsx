@@ -23,13 +23,15 @@ import { PrevState } from './components/state/PrevState'
 import { SharingState, ShoppingCart } from './components/state/SharingState'
 import { SharingStatePractice } from './components/state/SharingStatePractice'
 import { SnapShot } from './components/state/SnapShot'
+import { DashBoard } from './components/todo-practice/DashBoard'
 
 function App() {
   
 
   return (
     <>
-    <Header/>
+    <DashBoard/>
+    {/* <Header/> */}
     {/* <Dropdown/>
     <Main/>
     <SharingStatePractice/>

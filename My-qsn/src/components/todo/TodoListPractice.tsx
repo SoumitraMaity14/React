@@ -31,28 +31,28 @@ export const TodoListPractice = () => {
             todo.id !== id
         ))
     }
-    const filterTodo=()=>{
-        todos.map(todo=>{
-            if(filter === "Active") return todo.completed
-            if(filter==="Completed") return !todo.completed
+    const filterTodo=(
+       todos.filter(todo=>{
+            if(filter === "Active") return !todo.completed
+            if(filter==="Completed") return todo.completed
             return true
             }
-        )
-    }
+        ))
+    
     return (
         <div>
             <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className="p-2 border-white border-2"/>
             <button onClick={addTodoInput}>Add</button>
-            <select>
+            <select value={filter} onChange={(e)=>setFilter(e.target.value as any)}>
                 <option value="All">All</option><option value="Completed">Completed</option><option value="Active">Active</option>
             </select>
-            <ul>
-                {filterTodo.map((todo) =>
+            <ul className="space-y-2">
+                {filterTodo.map((todo) =>(
                     <li key={todo.id}>
                         <span onClick={() => toggleTodo(todo.id)} className={`cursor-pointer ${todo.completed ? "line-through text-gray" : ""}`}>{todo.text}</span>
                         <button onClick={()=>deleteTodo(todo.id)}>Delete</button>
                     </li>
-                )}
+                ))}
             </ul>
         </div>
     )
