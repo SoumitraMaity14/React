@@ -1,8 +1,8 @@
 
 import './App.css'
-import { Main } from './components/context/Main'
+
 import { Header } from './components/context/update-context/Header'
-import { User } from './components/context/User'
+
 import { Dropdown } from './components/Dropdown'
 import { DirectProps } from './components/props/DirectProps'
 import { RestProps } from './components/props/RestProps'
@@ -24,12 +24,14 @@ import { SharingState, ShoppingCart } from './components/state/SharingState'
 import { SharingStatePractice } from './components/state/SharingStatePractice'
 import { SnapShot } from './components/state/SnapShot'
 import { DashBoard } from './components/todo-practice/DashBoard'
+import { User } from './components/context/new-update-context/User'
 
 function App() {
   
 
   return (
     <>
+    <User/>
     <DashBoard/>
     {/* <Header/> */}
     {/* <Dropdown/>
