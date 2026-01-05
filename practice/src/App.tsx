@@ -31,8 +31,8 @@ function App() {
 
   return (
     <>
-    <User/>
-    <DashBoard/>
+    {/* <User/> */}
+    {/* <DashBoard/> */}
     {/* <Header/> */}
     {/* <Dropdown/>
     <Main/>
