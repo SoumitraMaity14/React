@@ -25,12 +25,14 @@ import { SharingStatePractice } from './components/state/SharingStatePractice'
 import { SnapShot } from './components/state/SnapShot'
 import { DashBoard } from './components/todo-practice/DashBoard'
 import { User } from './components/context/new-update-context/User'
+import { CountMemo } from './components/memo/CountMemo'
 
 function App() {
   
 
   return (
     <>
+    <CountMemo/>
     {/* <User/> */}
     {/* <DashBoard/> */}
     {/* <Header/> */}
