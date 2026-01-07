@@ -27,12 +27,14 @@ import { DashBoard } from './components/todo-practice/DashBoard'
 import { User } from './components/context/new-update-context/User'
 import { CountMemo } from './components/memo/CountMemo'
 import { TodoListPractice } from './components/state/array/TodoListPractice'
+import { SearchPractice } from './components/state/SearchPractice'
 
 function App() {
   
 
   return (
     <>
+    <SearchPractice/>
     <TodoListPractice/>
     {/* <CountMemo/> */}
     {/* <User/> */}
