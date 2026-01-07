@@ -26,13 +26,15 @@ import { SnapShot } from './components/state/SnapShot'
 import { DashBoard } from './components/todo-practice/DashBoard'
 import { User } from './components/context/new-update-context/User'
 import { CountMemo } from './components/memo/CountMemo'
+import { TodoListPractice } from './components/state/array/TodoListPractice'
 
 function App() {
   
 
   return (
     <>
-    <CountMemo/>
+    <TodoListPractice/>
+    {/* <CountMemo/> */}
     {/* <User/> */}
     {/* <DashBoard/> */}
     {/* <Header/> */}
