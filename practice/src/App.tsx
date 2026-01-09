@@ -28,12 +28,14 @@ import { User } from './components/context/new-update-context/User'
 import { CountMemo } from './components/memo/CountMemo'
 import { TodoListPractice } from './components/state/array/TodoListPractice'
 import { SearchPractice } from './components/state/SearchPractice'
+import { SortedProduct } from './SortedProduct'
 
 function App() {
   
 
   return (
     <>
+    <SortedProduct/>
     <SearchPractice/>
     <TodoListPractice/>
     {/* <CountMemo/> */}

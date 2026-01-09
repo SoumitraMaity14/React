@@ -7,9 +7,13 @@ function ArraySort(arr){
                 arr[j]=arr[j+1]
                 arr[j+1]=temp
             }
-
         }
     }
     return arr
 }
 console.log(ArraySort([2,5,7,1,4,3]))
+
+let arr=[5,6,7,4,3,9,2]
+
+const accending=arr.slice().sort((a,b)=> a-b)
+console.log(accending)
