@@ -10,6 +10,7 @@ import { CuponDiscount } from './components/cupon/CuponDiscount'
 import { SortPractice } from './components/sort/SortPractice'
 import { SearchPractice } from './components/search/SearchPractice'
 import { TodoListPractice } from './components/todo/TodoListPractice'
+import { ApplyCuponPractice } from './components/cupon/ApplyCuponPractice'
 
 
 
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <>
-    <TodoListPractice/>
+    <ApplyCuponPractice/>
+    {/* <TodoListPractice/> */}
     {/* <SearchPractice/> */}
     {/* <SortPractice/> */}
    {/* <CuponDiscount/> */}
