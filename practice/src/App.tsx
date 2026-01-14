@@ -29,15 +29,18 @@ import { CountMemo } from './components/memo/CountMemo'
 import { TodoListPractice } from './components/state/array/TodoListPractice'
 import { SearchPractice } from './components/state/SearchPractice'
 import { SortedProduct } from './SortedProduct'
+import { UseStateWithObject } from './components/state/object/UseStateWithObject'
+import { UseStateWithArray } from './components/state/array/useStateWithArray'
 
 function App() {
   
 
   return (
     <>
-    <SortedProduct/>
+    <UseStateWithArray/>
+    {/* <SortedProduct/>
     <SearchPractice/>
-    <TodoListPractice/>
+    <TodoListPractice/> */}
     {/* <CountMemo/> */}
     {/* <User/> */}
     {/* <DashBoard/> */}
