@@ -11,6 +11,7 @@ import { SortPractice } from './components/sort/SortPractice'
 import { SearchPractice } from './components/search/SearchPractice'
 import { TodoListPractice } from './components/todo/TodoListPractice'
 import { ApplyCuponPractice } from './components/cupon/ApplyCuponPractice'
+import { MegaMenuPractice } from './components/flyhover-menu/MegaMenuPractice'
 
 
 
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <>
-    <ApplyCuponPractice/>
+    <MegaMenuPractice/>
     {/* <TodoListPractice/> */}
     {/* <SearchPractice/> */}
     {/* <SortPractice/> */}
