@@ -31,13 +31,15 @@ import { SearchPractice } from './components/state/SearchPractice'
 import { SortedProduct } from './SortedProduct'
 import { UseStateWithObject } from './components/state/object/UseStateWithObject'
 import { UseStateWithArray } from './components/state/array/useStateWithArray'
+import { CounterReducerPractice } from './components/reducer/CounterReducerPractice'
 
 function App() {
   
 
   return (
     <>
-    <UseStateWithArray/>
+    <CounterReducerPractice/>
+    {/* <UseStateWithArray/> */}
     {/* <SortedProduct/>
     <SearchPractice/>
     <TodoListPractice/> */}
