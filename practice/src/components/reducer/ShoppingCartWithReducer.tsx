@@ -5,13 +5,28 @@ interface ProductsType {
     name: string,
     price: number
 }
-const initialState = {
+interface CartItem extends ProductsType {
+    quantity: number
+}
+
+interface CartState {
+    items: CartItem[]
+    totalAmount: number
+    totalItems: number
+}
+
+const initialState: CartState = {
     items: [],
     totalAmount: 0,
     totalItems: 0
 }
+type CartAction =
+    | { type: "ADD_ITEMS"; payload: ProductsType }
+    | { type: "REMOVE_ITEMS"; payload: { id: number } }
+    | { type: "UPDATE_ITEMS"; payload: { id: number; quantity: number } }
+    | { type: "CLEAR_CART" }
 
-const reducer = (state, action) => {
+const reducer = (state: CartState, action: CartAction) => {
     switch (action.type) {
         case "ADD_ITEMS": {
             const existingItemIndex = state.items.findIndex(
