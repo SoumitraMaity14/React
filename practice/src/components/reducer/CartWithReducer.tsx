@@ -21,7 +21,10 @@ const intialState: CartState = {
 
 }
 
-type CartAction = | { type: "Add_Items", payload: ProductsType } | {type:"Remove_Items", payload: {id: number} }
+type CartAction = | { type: "Add_Items", payload: ProductsType } 
+| {type:"Remove_Items", payload: {id: number} } 
+| {type:"Update_Items", payload:{id:number, quantity:number}}
+| {type:"Clear_Cart"}
 
 const reducer = (state: CartState, action: CartAction) => {
     switch (action.type) {
@@ -52,6 +55,13 @@ const reducer = (state: CartState, action: CartAction) => {
                 totalAmount: filteredItems.reduce((total, item)=>total+item.price*item.quantity,0),
                 totalItems: filteredItems.reduce((total, item)=>total+ item.quantity, 0 )
             }
+        case "Update_Items":{
+            if(action.payload.quantity===0){
+                
+            }
+            
+        }
+            
     }
 
 }
