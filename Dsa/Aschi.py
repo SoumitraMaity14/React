@@ -8,4 +8,3 @@ def Aschi(num):
             continue
         return False
     return True
-print(Aschi("hfjsd@f8483"))
