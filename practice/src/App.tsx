@@ -32,13 +32,15 @@ import { SortedProduct } from './SortedProduct'
 import { UseStateWithObject } from './components/state/object/UseStateWithObject'
 import { UseStateWithArray } from './components/state/array/useStateWithArray'
 import { CounterReducerPractice } from './components/reducer/CounterReducerPractice'
+import { StopPropigation } from './components/StopPropigation'
 
 function App() {
   
 
   return (
     <>
-    <CounterReducerPractice/>
+    <StopPropigation/>
+    {/* <CounterReducerPractice/> */}
     {/* <UseStateWithArray/> */}
     {/* <SortedProduct/>
     <SearchPractice/>
