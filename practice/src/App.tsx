@@ -33,13 +33,15 @@ import { UseStateWithObject } from './components/state/object/UseStateWithObject
 import { UseStateWithArray } from './components/state/array/useStateWithArray'
 import { CounterReducerPractice } from './components/reducer/CounterReducerPractice'
 import { StopPropigation } from './components/StopPropigation'
+import { CartWithReducer } from './components/reducer/CartWithReducer'
 
 function App() {
   
 
   return (
     <>
-    <StopPropigation/>
+    <CartWithReducer/>
+    {/* <StopPropigation/> */}
     {/* <CounterReducerPractice/> */}
     {/* <UseStateWithArray/> */}
     {/* <SortedProduct/>
