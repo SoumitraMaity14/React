@@ -34,13 +34,15 @@ import { UseStateWithArray } from './components/state/array/useStateWithArray'
 import { CounterReducerPractice } from './components/reducer/CounterReducerPractice'
 import { StopPropigation } from './components/StopPropigation'
 import { CartWithReducer } from './components/reducer/CartWithReducer'
+import { UseStateUseReducer } from './components/reducer/UseStateUseReducer'
 
 function App() {
   
 
   return (
     <>
-    <CartWithReducer/>
+    <UseStateUseReducer/>
+    {/* <CartWithReducer/> */}
     {/* <StopPropigation/> */}
     {/* <CounterReducerPractice/> */}
     {/* <UseStateWithArray/> */}
