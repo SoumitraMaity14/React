@@ -24,7 +24,7 @@ import { SharingState, ShoppingCart } from './components/state/SharingState'
 import { SharingStatePractice } from './components/state/SharingStatePractice'
 import { SnapShot } from './components/state/SnapShot'
 import { DashBoard } from './components/todo-practice/DashBoard'
-import { User } from './components/context/new-update-context/User'
+// import { User } from './components/context/new-update-context/User'
 import { CountMemo } from './components/memo/CountMemo'
 import { TodoListPractice } from './components/state/array/TodoListPractice'
 import { SearchPractice } from './components/state/SearchPractice'
@@ -35,13 +35,15 @@ import { CounterReducerPractice } from './components/reducer/CounterReducerPract
 import { StopPropigation } from './components/StopPropigation'
 import { CartWithReducer } from './components/reducer/CartWithReducer'
 import { UseStateUseReducer } from './components/reducer/UseStateUseReducer'
+import {User} from './components/context/practice-context/User'
 
 function App() {
   
 
   return (
     <>
-    <UseStateUseReducer/>
+    <User/>
+    {/* <UseStateUseReducer/> */}
     {/* <CartWithReducer/> */}
     {/* <StopPropigation/> */}
     {/* <CounterReducerPractice/> */}
