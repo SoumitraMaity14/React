@@ -13,6 +13,7 @@ import { TodoListPractice } from './components/todo/TodoListPractice'
 import { ApplyCuponPractice } from './components/cupon/ApplyCuponPractice'
 import { MegaMenuPractice } from './components/flyhover-menu/MegaMenuPractice'
 import { InputTodoListPractice } from './components/todo/InputTodoListPractice'
+import { SearchPracticeTwo } from './components/search/SearchPracticeTwo'
 
 
 
@@ -20,7 +21,8 @@ function App() {
 
   return (
     <>
-    <InputTodoListPractice/>
+    <SearchPracticeTwo/>
+    {/* <InputTodoListPractice/> */}
     {/* <MegaMenuPractice/> */}
     {/* <TodoListPractice/> */}
     {/* <SearchPractice/> */}

@@ -24,17 +24,18 @@ import { SharingState, ShoppingCart } from './components/state/SharingState'
 import { SharingStatePractice } from './components/state/SharingStatePractice'
 import { SnapShot } from './components/state/SnapShot'
 import { DashBoard } from './components/todo-practice/DashBoard'
-// import { User } from './components/context/new-update-context/User'
+// import { User } from './components/context/User'
 import { CountMemo } from './components/memo/CountMemo'
 import { TodoListPractice } from './components/state/array/TodoListPractice'
 import { SearchPractice } from './components/state/SearchPractice'
 import { SortedProduct } from './SortedProduct'
 import { UseStateWithObject } from './components/state/object/UseStateWithObject'
-import { UseStateWithArray } from './components/state/array/useStateWithArray'
+// import { UseStateWithArray } from './components/state/array/useStateWithArray'
 import { CounterReducerPractice } from './components/reducer/CounterReducerPractice'
 import { StopPropigation } from './components/StopPropigation'
 import { CartWithReducer } from './components/reducer/CartWithReducer'
 import { UseStateUseReducer } from './components/reducer/UseStateUseReducer'
+import { ContextProvider } from './components/context/practice-context/ContextProvider'
 import {User} from './components/context/practice-context/User'
 
 function App() {
@@ -42,7 +43,8 @@ function App() {
 
   return (
     <>
-    <User/>
+    {/* <ContextProvider> <User/></ContextProvider> */}
+   
     {/* <UseStateUseReducer/> */}
     {/* <CartWithReducer/> */}
     {/* <StopPropigation/> */}
