@@ -14,6 +14,7 @@ import { ApplyCuponPractice } from './components/cupon/ApplyCuponPractice'
 import { MegaMenuPractice } from './components/flyhover-menu/MegaMenuPractice'
 import { InputTodoListPractice } from './components/todo/InputTodoListPractice'
 import { SearchPracticeTwo } from './components/search/SearchPracticeTwo'
+import { ProductDetails } from './components/productdetails/ProductDetails'
 
 
 
@@ -21,7 +22,8 @@ function App() {
 
   return (
     <>
-    <SearchPracticeTwo/>
+    <ProductDetails/>
+    {/* <SearchPracticeTwo/> */}
     {/* <InputTodoListPractice/> */}
     {/* <MegaMenuPractice/> */}
     {/* <TodoListPractice/> */}
