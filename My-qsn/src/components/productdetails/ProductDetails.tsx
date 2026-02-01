@@ -19,7 +19,6 @@ export const ProductDetails = () => {
                     post: "Daspur",
                     pin: 721148
                 }
-            
         },
         {
             name: "Akash", role: "member", Address: 
@@ -36,8 +35,7 @@ export const ProductDetails = () => {
                     village: "Talibhata",
                     post: "Daspur",
                     pin: 721148
-                }
-            
+                } 
         }
     ]
     return (
