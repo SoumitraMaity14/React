@@ -15,6 +15,7 @@ import { MegaMenuPractice } from './components/flyhover-menu/MegaMenuPractice'
 import { InputTodoListPractice } from './components/todo/InputTodoListPractice'
 import { SearchPracticeTwo } from './components/search/SearchPracticeTwo'
 import { ProductDetails } from './components/productdetails/ProductDetails'
+import { Pagination } from './components/pagination/Pagination'
 
 
 
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <>
-    <ProductDetails/>
+    <Pagination/>
+    {/* <ProductDetails/> */}
     {/* <SearchPracticeTwo/> */}
     {/* <InputTodoListPractice/> */}
     {/* <MegaMenuPractice/> */}
