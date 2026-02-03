@@ -16,6 +16,7 @@ import { InputTodoListPractice } from './components/todo/InputTodoListPractice'
 import { SearchPracticeTwo } from './components/search/SearchPracticeTwo'
 import { ProductDetails } from './components/productdetails/ProductDetails'
 import { Pagination } from './components/pagination/Pagination'
+import { Accordian } from './components/accordian/Accordian'
 
 
 
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <>
-    <Pagination/>
+    <Accordian/>
     {/* <ProductDetails/> */}
     {/* <SearchPracticeTwo/> */}
     {/* <InputTodoListPractice/> */}
