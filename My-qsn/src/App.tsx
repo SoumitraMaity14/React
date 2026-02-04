@@ -26,8 +26,8 @@ function App() {
 
   return (
     <>
-    {/* <AccordianPractice/> */}
-    <PaginationPractice/>
+    <AccordianPractice/>
+    {/* <PaginationPractice/> */}
     {/* <Accordian/> */}
     {/* <ProductDetails/> */}
     {/* <SearchPracticeTwo/> */}
