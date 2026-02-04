@@ -17,6 +17,8 @@ import { SearchPracticeTwo } from './components/search/SearchPracticeTwo'
 import { ProductDetails } from './components/productdetails/ProductDetails'
 import { Pagination } from './components/pagination/Pagination'
 import { Accordian } from './components/accordian/Accordian'
+import { PaginationPractice } from './components/pagination/PaginationPractice'
+import { AccordianPractice } from './components/accordian/AccordianPractice'
 
 
 
@@ -24,7 +26,9 @@ function App() {
 
   return (
     <>
-    <Accordian/>
+    {/* <AccordianPractice/> */}
+    <PaginationPractice/>
+    {/* <Accordian/> */}
     {/* <ProductDetails/> */}
     {/* <SearchPracticeTwo/> */}
     {/* <InputTodoListPractice/> */}
