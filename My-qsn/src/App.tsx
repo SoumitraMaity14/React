@@ -19,6 +19,7 @@ import { Pagination } from './components/pagination/Pagination'
 import { Accordian } from './components/accordian/Accordian'
 import { PaginationPractice } from './components/pagination/PaginationPractice'
 import { AccordianPractice } from './components/accordian/AccordianPractice'
+import { Modalpopup } from './components/modal/Modalpopup'
 
 
 
@@ -26,7 +27,8 @@ function App() {
 
   return (
     <>
-    <AccordianPractice/>
+    <Modalpopup/>
+    {/* <AccordianPractice/> */}
     {/* <PaginationPractice/> */}
     {/* <Accordian/> */}
     {/* <ProductDetails/> */}
