@@ -21,6 +21,7 @@ import { PaginationPractice } from './components/pagination/PaginationPractice'
 import { AccordianPractice } from './components/accordian/AccordianPractice'
 import { Modalpopup } from './components/modal/Modalpopup'
 import { InputValidation } from './components/input-validation/InputValidation'
+import { ToggleButton } from './components/toggle/ToggleButton'
 
 
 
@@ -28,7 +29,8 @@ function App() {
 
   return (
     <>
-    <InputValidation/>
+    <ToggleButton/>
+    {/* <InputValidation/> */}
     {/* <Modalpopup/> */}
     {/* <AccordianPractice/> */}
     {/* <PaginationPractice/> */}

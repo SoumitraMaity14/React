@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+/* This tells Tailwind that the 'dark' variant should trigger 
+   whenever the .dark class is present on the html/body */
+@variant dark (&:where(.dark, .dark *));
