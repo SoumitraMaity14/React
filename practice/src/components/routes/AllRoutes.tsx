@@ -1,0 +1,30 @@
+
+import { Route, Routes } from 'react-router-dom'
+import { Home } from './element/Home'
+import { About } from './element/About'
+import { NavBar } from './element/NavLink'
+import { OrderDetails } from './element/OrderDetails'
+import { NoMatchRoute } from './element/NoMatchRoute'
+import { Product } from './element/nested/Product'
+import { FeaturePage } from './element/nested/FeaturePage'
+import { NewPage } from './element/nested/NewPage'
+
+export const AllRoutes = () => {
+    return (
+        <>
+            <NavBar />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='about' element={<About />} />
+                <Route path='order-details' element={<OrderDetails />} />
+                <Route path='product' element={<Product />}>
+                <Route index element={<FeaturePage />} />
+                    <Route path='feture-page' element={<FeaturePage />} />
+                    <Route path='new-page' element={<NewPage />} />
+                </Route>
+                <Route path='*' element={<NoMatchRoute />} />
+            </Routes>
+        </>
+
+    )
+}

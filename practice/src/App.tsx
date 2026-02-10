@@ -37,12 +37,14 @@ import { CartWithReducer } from './components/reducer/CartWithReducer'
 import { UseStateUseReducer } from './components/reducer/UseStateUseReducer'
 import { ContextProvider } from './components/context/practice-context/ContextProvider'
 import {User} from './components/context/practice-context/User'
+import { AllRoutes } from './components/routes/AllRoutes'
 
 function App() {
   
 
   return (
     <>
+    <AllRoutes/>
     {/* <ContextProvider> <User/></ContextProvider> */}
    
     {/* <UseStateUseReducer/> */}
