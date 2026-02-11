@@ -1,6 +1,4 @@
 import { Outlet, useSearchParams } from "react-router-dom"
-
-
 export const User = () => {
     const [searchParams, setSearchParams]=useSearchParams()
     const filterUsers=searchParams.get('filter')==='active'
