@@ -37,10 +37,11 @@ function isCount(str){
 console.log(isCount("dfhsjdf3894hjdjw923AHJDAKJ8839AJeoriwe"))
 
 function isFactorial(num){
-    let total=0
-    for(let i=0; i<=num; i++){
-        total=total+i
+    let total=1
+    for(let i=1; i<=num; i++){
+        total=total*i
     }
+    return total
 }
 console.log(isFactorial(6))
 
