@@ -1,7 +1,10 @@
 import { Link, NavLink } from "react-router-dom"
+import { useAuth } from "./Auth/Auth"
 
 
 export const NavBar = () => {
+
+    const auth=useAuth()
     const navLinkStyles=({isActive}:{isActive: any})=>{
         return {
             fontWeight: isActive? 'bold': 'normal',
@@ -15,7 +18,10 @@ export const NavBar = () => {
         <NavLink style={navLinkStyles} to='/'>Home</NavLink>
         <NavLink style={navLinkStyles} to='about'>About</NavLink>
         <NavLink style={navLinkStyles} to='product'>product</NavLink>
-
+        <NavLink style={navLinkStyles} to='profile'>Profile</NavLink>
+    {!auth.user &&(
+        <NavLink style={navLinkStyles} to='login'>login</NavLink>
+    )}
     </nav>
   )
 }

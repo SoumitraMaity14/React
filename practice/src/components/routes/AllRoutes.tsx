@@ -11,14 +11,19 @@ import { NewPage } from './element/nested/NewPage'
 import { User } from './element/User'
 import { UserDetailsPage } from './element/UserDetailsPage'
 import { AdminPage } from './element/AdminPage'
+import { AuthProvider } from './element/Auth/Auth'
+import { Profile } from './element/Auth/Profile'
+import { Login } from './element/Auth/Login'
 
 export const AllRoutes = () => {
     return (
-        <>
+        <AuthProvider>
             <NavBar />
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='about' element={<About />} />
+                <Route path='profile' element={<Profile/>}/>
+                <Route path='login' element={<Login/>}/>
                 <Route path='order-details' element={<OrderDetails />} />
                 <Route path='product' element={<Product />}>
                     <Route index element={<FeaturePage />} />
@@ -31,7 +36,7 @@ export const AllRoutes = () => {
                 </Route>
                 <Route path='*' element={<NoMatchRoute />} />
             </Routes>
-        </>
+        </AuthProvider>
 
     )
 }
