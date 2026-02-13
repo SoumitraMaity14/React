@@ -14,6 +14,7 @@ import { AdminPage } from './element/AdminPage'
 import { AuthProvider } from './element/Auth/Auth'
 import { Profile } from './element/Auth/Profile'
 import { Login } from './element/Auth/Login'
+import { RequireAuth } from './element/Auth/RequireAuth'
 
 export const AllRoutes = () => {
     return (
@@ -22,7 +23,7 @@ export const AllRoutes = () => {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='about' element={<About />} />
-                <Route path='profile' element={<Profile/>}/>
+                <Route path='profile' element={<RequireAuth><Profile/></RequireAuth>}/>
                 <Route path='login' element={<Login/>}/>
                 <Route path='order-details' element={<OrderDetails />} />
                 <Route path='product' element={<Product />}>
