@@ -38,13 +38,15 @@ import { UseStateUseReducer } from './components/reducer/UseStateUseReducer'
 import { ContextProvider } from './components/context/practice-context/ContextProvider'
 import {User} from './components/context/practice-context/User'
 import { AllRoutes } from './components/routes/AllRoutes'
+import { DragDrop } from './components/drag-drop/DragDrop'
 
 function App() {
   
 
   return (
     <>
-    <AllRoutes/>
+    <DragDrop/>
+    {/* <AllRoutes/> */}
     {/* <ContextProvider> <User/></ContextProvider> */}
    
     {/* <UseStateUseReducer/> */}
