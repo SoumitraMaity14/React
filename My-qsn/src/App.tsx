@@ -22,6 +22,7 @@ import { AccordianPractice } from './components/accordian/AccordianPractice'
 import { Modalpopup } from './components/modal/Modalpopup'
 import { InputValidation } from './components/input-validation/InputValidation'
 import { ToggleButton } from './components/toggle/ToggleButton'
+import { TabSearchParams } from './components/routes/TabSearchParams'
 
 
 
@@ -29,7 +30,8 @@ function App() {
 
   return (
     <>
-    <ToggleButton/>
+    <TabSearchParams/>
+    {/* <ToggleButton/> */}
     {/* <InputValidation/> */}
     {/* <Modalpopup/> */}
     {/* <AccordianPractice/> */}
