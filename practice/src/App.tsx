@@ -39,13 +39,15 @@ import { ContextProvider } from './components/context/practice-context/ContextPr
 import {User} from './components/context/practice-context/User'
 import { AllRoutes } from './components/routes/AllRoutes'
 import { DragDrop } from './components/drag-drop/DragDrop'
+import { TimeOut } from './components/ref/TimeOut'
 
 function App() {
   
 
   return (
     <>
-    <DragDrop/>
+    <TimeOut/>
+    {/* <DragDrop/> */}
     {/* <AllRoutes/> */}
     {/* <ContextProvider> <User/></ContextProvider> */}
    
