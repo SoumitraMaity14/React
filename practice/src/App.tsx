@@ -40,6 +40,7 @@ import {User} from './components/context/practice-context/User'
 import { AllRoutes } from './components/routes/AllRoutes'
 import { DragDrop } from './components/drag-drop/DragDrop'
 import { TimeOut } from './components/ref/TimeOut'
+import { InputFocus } from './components/ref/InputFocus'
 
 function App() {
   
@@ -47,6 +48,7 @@ function App() {
   return (
     <>
     <TimeOut/>
+    <InputFocus/>
     {/* <DragDrop/> */}
     {/* <AllRoutes/> */}
     {/* <ContextProvider> <User/></ContextProvider> */}
