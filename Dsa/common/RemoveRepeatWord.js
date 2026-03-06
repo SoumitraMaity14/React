@@ -35,7 +35,28 @@ function removeRepeat(str){
     }
     return false
 }
+
+function anagram(s1, s2){
+    let freq={}
+    if(s1.length!==s2.length){
+        return false
+
+    }
+    for(let ch of s1){
+        freq[ch]=(freq[ch]||0)+1
+    }
+    for(let ch of s2){
+        if(!freq[ch]){
+            return false
+        }
+        freq[ch]--
+    }
+    return true
+}
 console.log(RemoveRepeatWord("Applle"))
 console.log(IsAnagram("apple", "paale"))
 
 console.log(removeRepeat([1,2,3]))
+
+console.log(anagram("apple", "pplea"))
+console.log(anagram("lotus","lotss"))
