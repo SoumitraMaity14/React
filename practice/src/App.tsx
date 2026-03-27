@@ -42,13 +42,15 @@ import { DragDrop } from './components/drag-drop/DragDrop'
 import { TimeOut } from './components/ref/TimeOut'
 import { InputFocus } from './components/ref/InputFocus'
 import { PracticeAdd } from './components/state/object/PracticeAdd'
+import { Accordian } from './components/accordian/Accordian'
 
 function App() {
   
 
   return (
     <>
-    <PracticeAdd/>
+    <Accordian/>
+    {/* <PracticeAdd/> */}
     {/* <TimeOut/> */}
     {/* <InputFocus/> */}
     {/* <DragDrop/> */}
