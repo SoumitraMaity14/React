@@ -23,3 +23,14 @@ print(reverseArray([1,2,3,4,5,6]))
 def reverseShort(arr):
     return(arr[::-1])
 print(reverseShort([1,2,3,4,5,6]))
+
+def fabinosis(num):
+    a=0
+    b=1
+    next=0
+    for i in range(num):
+        next=a+b
+        a=b
+        b=next
+    return a
+print(fabinosis(6))
