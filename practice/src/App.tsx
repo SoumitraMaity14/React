@@ -45,14 +45,18 @@ import { PracticeAdd } from './components/state/object/PracticeAdd'
 import { Accordian } from './components/accordian/Accordian'
 import { YoutubeForm } from './components/form/YoutubeForm'
 import { TodoPractice } from './components/todo-practice/TodoPractice'
+import { ModalPopup } from './components/modal/ModalPopup'
+import { SearchProduct } from './components/search/SearchProduct'
 
 function App() {
   
 
   return (
     <>
+    <SearchProduct/>
+    {/* <ModalPopup/> */}
     {/* <TodoPractice/> */}
-    <YoutubeForm/>
+    {/* <YoutubeForm/> */}
     {/* <Accordian/> */}
     {/* <PracticeAdd/> */}
     {/* <TimeOut/> */}
