@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form"
+import { useForm,useFieldArray } from "react-hook-form"
 import { DevTool } from "@hookform/devtools"
 
 let formCount = 0
@@ -10,7 +10,10 @@ interface data {
     facebook: string,
     twitter: string
   },
-  phoneNumber:string[]
+  phoneNumber:string[],
+  phNumber:{
+    number: string
+  }[]
 }
 
 export const YoutubeForm = () => {
@@ -26,11 +29,19 @@ export const YoutubeForm = () => {
           facebook: "maitySoumitra",
           twitter: "soumitra_maity"
         },
-        phoneNumber:["", ""]
+        phoneNumber:["", ""],
+        phNumber:[{
+          number:""
+        }]
       }
     }
   })
   const { register, control, handleSubmit, formState } = form
+
+  const {fields, append, remove}=useFieldArray({
+    name: 'phNumber', 
+    control
+  })
   const { errors } = formState
   const onSubmit = (data: data) => {
     console.log("Youtube form data", data)
@@ -141,7 +152,24 @@ export const YoutubeForm = () => {
           )} className="w-full p-2 border border-gray-200 rounded-md" />
           <p className="text-red-800 mt-2">{errors.phoneNumber?.[1]?.message}</p>
         </div>
-        <button className="px-4 py-2 bg-white text-gray-600 border rounded">Submit</button>
+        <div className="mt-5 ">
+          <label htmlFor="phNumber">secondary phone number</label>
+          <div className="">
+            {
+              fields.map((field, index)=>(
+                <div key={field.id} className="flex gap-3">
+                  <input className="w-full p-2 border border-gray-200 rounded-md" type="text" id="phNumber" {...register(`phNumber.${index}.number` as const)}/>
+                  {index > 0 &&(
+                    <button className="px-4 py-2 bg-white text-gray-600 border rounded" onClick={()=>remove(index)}>Remove</button>
+                  )}
+                  </div>
+              ))
+            }
+             <button className="mt-4 px-4 py-2 bg-white text-gray-600 border rounded" onClick={()=>append({number:""})}>Add</button>
+          </div>
+          
+          </div>
+        <button className=" px-4 py-2 bg-white text-gray-600 border rounded">Submit</button>
       </form>
       <DevTool control={control} />
     </div>
