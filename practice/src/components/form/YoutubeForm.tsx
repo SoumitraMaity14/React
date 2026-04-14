@@ -13,7 +13,9 @@ interface data {
   phoneNumber:string[],
   phNumber:{
     number: string
-  }[]
+  }[],
+  age: number,
+  dob: Date
 }
 
 export const YoutubeForm = () => {
@@ -32,7 +34,9 @@ export const YoutubeForm = () => {
         phoneNumber:["", ""],
         phNumber:[{
           number:""
-        }]
+        }],
+        age: 0,
+        dob:new Date()
       }
     }
   })
@@ -169,6 +173,30 @@ export const YoutubeForm = () => {
           </div>
           
           </div>
+           <div className="mt-5">
+          <label htmlFor="age">Age</label>
+          <input type="number" id="age" {...register("age",
+            {valueAsNumber:true,
+              required: {
+                value: true,
+                message: "age is required"
+              }
+            }
+          )} className="w-full p-2 border border-gray-200 rounded-md" />
+          <p className="text-red-800 mt-2">{errors.age?.message}</p>
+        </div>
+        <div className="mt-5">
+          <label htmlFor="date">Date</label>
+          <input type="date" id="date" {...register("dob",
+            { valueAsDate:true,
+              required: {
+                value: true,
+                message: "date is required"
+              }
+            }
+          )} className="w-full p-2 border border-gray-200 rounded-md" />
+          <p className="text-red-800 mt-2">{errors.dob?.message}</p>
+        </div>
         <button className=" px-4 py-2 bg-white text-gray-600 border rounded">Submit</button>
       </form>
       <DevTool control={control} />

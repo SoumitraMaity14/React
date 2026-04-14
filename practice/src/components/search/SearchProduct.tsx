@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
  type productType={
         id:number,
@@ -22,6 +22,9 @@ import { useState } from "react";
 
 export const SearchProduct = () => {
     const [search, setSearch]=useState('')
+    useEffect(()=>{
+        
+    })
 
     const filterSearch=products.filter(product=>
         product.name.toLowerCase().includes(search.toLowerCase())
