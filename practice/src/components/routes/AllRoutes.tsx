@@ -15,7 +15,7 @@ import { AuthProvider } from './element/Auth/Auth'
 import { Profile } from './element/Auth/Profile'
 import { Login } from './element/Auth/Login'
 import { RequireAuth } from './element/Auth/RequireAuth'
-import { SearchParams } from './element/SearchParams'
+import { SearchParams } from './SearchParams'
 
 export const AllRoutes = () => {
     return (
@@ -38,6 +38,7 @@ export const AllRoutes = () => {
                 </Route>
                 <Route path='*' element={<NoMatchRoute />} />
                 <Route path='searchparams' element={<SearchParams/>}/>
+                <Route path='search' element={<SearchParams/>}/>
             </Routes>
         </AuthProvider>
 
