@@ -1,5 +1,6 @@
 import { useForm,useFieldArray } from "react-hook-form"
 import { DevTool } from "@hookform/devtools"
+import { useEffect } from "react"
 
 let formCount = 0
 interface data {
@@ -40,7 +41,27 @@ export const YoutubeForm = () => {
       }
     }
   })
-  const { register, control, handleSubmit, formState } = form
+  const { register, control, handleSubmit, formState,watch,getValues, setValue } = form
+  const watchedUserName=watch()
+
+  useEffect(()=>{
+    const subscription=watch((value)=>{
+      console.log(value)
+    })
+    return()=> subscription.unsubscribe()
+  }, [watch])
+
+  const handaleGetValues=()=>{
+    console.log("Get Values", getValues(["name", "social"]))
+  }
+  const handalSetvalues=()=>{
+    setValue("name","",
+      {shouldDirty:true,
+        shouldTouch:true,
+        shouldValidate:true
+      }
+    )
+  }
 
   const {fields, append, remove}=useFieldArray({
     name: 'phNumber', 
@@ -54,6 +75,7 @@ export const YoutubeForm = () => {
   return (
     <div className="mt-10 max-w-2xl mx-auto shadow-md rounded-md px-8 py-10">
       <p className="pb-10 text-center pt-10">YoutubeForm ({formCount / 2}) </p>
+      <p>watched Values: {JSON.stringify(watchedUserName)}</p>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 items-start " noValidate>
         <div className="mt-5">
           <label htmlFor="name" >Name</label>
@@ -198,6 +220,12 @@ export const YoutubeForm = () => {
           <p className="text-red-800 mt-2">{errors.dob?.message}</p>
         </div>
         <button className=" px-4 py-2 bg-white text-gray-600 border rounded">Submit</button>
+        <button 
+        onClick={handaleGetValues}
+        className=" px-4 py-2 bg-white text-gray-600 border rounded">Get values</button>
+        <button 
+        onClick={handalSetvalues}
+        className=" px-4 py-2 bg-white text-gray-600 border rounded">Set values</button>
       </form>
       <DevTool control={control} />
     </div>

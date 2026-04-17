@@ -56,13 +56,13 @@ function App() {
     {/* <SearchProduct/> */}
     {/* <ModalPopup/> */}
     {/* <TodoPractice/> */}
-    {/* <YoutubeForm/> */}
+    <YoutubeForm/>
     {/* <Accordian/> */}
     {/* <PracticeAdd/> */}
     {/* <TimeOut/> */}
     {/* <InputFocus/> */}
     {/* <DragDrop/> */}
-    <AllRoutes/>
+    {/* <AllRoutes/> */}
     {/* <ContextProvider> <User/></ContextProvider> */}
    
     {/* <UseStateUseReducer/> */}
