@@ -1,4 +1,4 @@
-import { useForm,useFieldArray } from "react-hook-form"
+import { useForm,useFieldArray,  type FieldErrors } from "react-hook-form"
 import { DevTool } from "@hookform/devtools"
 import { useEffect } from "react"
 
@@ -41,8 +41,13 @@ export const YoutubeForm = () => {
       }
     }
   })
-  const { register, control, handleSubmit, formState,watch,getValues, setValue } = form
-  const watchedUserName=watch()
+  const { register, control, handleSubmit, formState,watch,getValues, setValue,reset  } = form
+ 
+
+
+  const { errors, touchedFields, dirtyFields, isDirty, isValid, isSubmitting, isSubmitted, isSubmitSuccessful,submitCount } = formState
+    console.log({touchedFields, dirtyFields, isDirty, isSubmitting, isSubmitted, isSubmitSuccessful,submitCount})
+  // const watchedUserName=watch()
 
   useEffect(()=>{
     const subscription=watch((value)=>{
@@ -50,6 +55,12 @@ export const YoutubeForm = () => {
     })
     return()=> subscription.unsubscribe()
   }, [watch])
+
+  useEffect(()=>{
+    if(isSubmitSuccessful){
+      reset()
+    }
+  },[isSubmitSuccessful, reset])
 
   const handaleGetValues=()=>{
     console.log("Get Values", getValues(["name", "social"]))
@@ -67,16 +78,20 @@ export const YoutubeForm = () => {
     name: 'phNumber', 
     control
   })
-  const { errors } = formState
+  
   const onSubmit = (data: data) => {
     console.log("Youtube form data", data)
+  }
+
+  const onError=(error:FieldErrors<data>)=>{
+    console.log("form error", error)
   }
   formCount++
   return (
     <div className="mt-10 max-w-2xl mx-auto shadow-md rounded-md px-8 py-10">
       <p className="pb-10 text-center pt-10">YoutubeForm ({formCount / 2}) </p>
-      <p>watched Values: {JSON.stringify(watchedUserName)}</p>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 items-start " noValidate>
+      {/* <p>watched Values: {JSON.stringify(watchedUserName)}</p> */}
+      <form onSubmit={handleSubmit(onSubmit, onError)} className="flex flex-col gap-3 items-start " noValidate>
         <div className="mt-5">
           <label htmlFor="name" >Name</label>
           <input type="text" id="name" {...register("name",
@@ -145,7 +160,10 @@ export const YoutubeForm = () => {
         <div className="mt-5">
           <label htmlFor="twitter">twitter</label>
           <input type="text" id="twitter" {...register("social.twitter",
+          
             {
+              // disabled:true,
+              // disabled: watch("channel")==="",
               required: {
                 value: true,
                 message: "twitter is required"
@@ -219,7 +237,9 @@ export const YoutubeForm = () => {
           )} className="w-full p-2 border border-gray-200 rounded-md" />
           <p className="text-red-800 mt-2">{errors.dob?.message}</p>
         </div>
-        <button className=" px-4 py-2 bg-white text-gray-600 border rounded">Submit</button>
+        <button 
+        disabled={!isDirty||!isValid || isSubmitSuccessful}
+        className=" px-4 py-2 bg-white text-gray-600 border rounded">Submit</button>
         <button 
         onClick={handaleGetValues}
         className=" px-4 py-2 bg-white text-gray-600 border rounded">Get values</button>
