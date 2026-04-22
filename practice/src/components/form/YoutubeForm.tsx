@@ -39,9 +39,11 @@ export const YoutubeForm = () => {
         age: 0,
         dob:new Date()
       }
-    }
+      
+    },
+    mode:"all"
   })
-  const { register, control, handleSubmit, formState,watch,getValues, setValue,reset  } = form
+  const { register, control, handleSubmit, formState,watch,getValues, setValue,reset, trigger  } = form
  
 
 
@@ -251,6 +253,9 @@ export const YoutubeForm = () => {
         <button 
         onClick={handalSetvalues}
         className=" px-4 py-2 bg-white text-gray-600 border rounded">Set values</button>
+         <button 
+        onClick={()=>trigger("channel")}
+        className=" px-4 py-2 bg-white text-gray-600 border rounded">Trigger state</button>
       </form>
       <DevTool control={control} />
     </div>
