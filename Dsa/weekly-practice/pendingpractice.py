@@ -4,7 +4,8 @@ def mostWordsFound(words):
         max_count=word.count(' ')+1
         max_word=max(max_word, max_count)
     return max_word
-print(mostWordsFound("this is a good", "this is a bad situation most"))
+print(mostWordsFound(["please wait", "continue to fight", "continue to win"]))
+
 
 def finalState(nums, k, mulplier):
     for _ in range(k):
@@ -29,4 +30,16 @@ def maxCountword(subset, sentences):
             count+=1
     return count
 print(maxCountword("cad",["ca", "d"]))
+
+def climbstairs(nums):
+    if nums<=2:
+        return nums
+    prev1=2
+    prev2=1
+    for i in range(3,nums+1):
+        next=prev1+prev2
+        prev2=prev1
+        prev1=next
+    return prev1
+print(climbstairs(5))
 
