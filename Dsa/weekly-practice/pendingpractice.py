@@ -43,3 +43,10 @@ def climbstairs(nums):
     return prev1
 print(climbstairs(5))
 
+def change_postion(arr):
+    n=len(arr)
+    ans=[0]*n
+    for i in range(n):
+        ans[i]=arr[arr[i]]
+    return ans
+print(change_postion([0,3,2,4,1,5,6]))
