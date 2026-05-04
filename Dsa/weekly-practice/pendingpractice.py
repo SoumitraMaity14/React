@@ -64,3 +64,12 @@ def perfectNumber(num):
 print(perfectNumber(28))
 
 
+def findFriendsOrder(order, friends):
+    result=[]
+    for position in order:
+        if position in friends:
+            result.append(position)
+    return result
+print(findFriendsOrder([1,2,4,5,7],[2,7,5]))
+
+
