@@ -1,5 +1,4 @@
 from fastapi import fastAPI, Depends
-
 from sqlalchemy.orm import Session
 
 
@@ -38,3 +37,19 @@ def update_product(id:int, product:Product, db=Session=Depends(get_db)):
     else:
         return "product not updated"
     
+@app.get("/product/{id}")
+def get_product(id:int, product:Product, db:Session=Depends(get_db)):
+    db_product=db.query(database_model.Product).filter(database_model.Product.id==id).first()
+    if db_product:
+        return db_product
+    else:
+        return "product not found"
+
+@app.delete("/product")
+def delete_product(id:int, product:Product, db:Session=Depends(get_db)):
+    db_product=db.query(database_model.Product).filter(database_model.Product.id==id).first()
+    if db_product:
+        db.delete(db_product)
+        return "product deleted"
+    else:
+        return "product not found"
