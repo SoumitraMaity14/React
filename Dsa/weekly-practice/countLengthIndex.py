@@ -20,3 +20,15 @@ print(arraySort([2,3,4,5]))
 def aimplesort(arr):
     return arr[::-1]
 print(aimplesort([2,3,4,5]))
+
+def aschi(n):
+    for i in n:
+        if "0"<=i<="9":
+            continue
+        if "a"<=i<="z":
+            continue
+        if "A"<=i<="Z":
+            continue
+        return False
+    return True
+print(aschi("hjadgajdjkie893@"))
